@@ -451,14 +451,18 @@ Cybersecurity Intern - PNH Consulting Pvt. Ltd. (May 2024 - Dec 2024)
 
 // Terminal Easter Egg
 class TerminalEasterEgg {
-    constructor() {
+    constructor(portfolioApp) {
+        this.portfolioApp = portfolioApp;
         this.commands = {
-            'help': "Available commands: whoami, skills, projects, contact, clear, hack, theme [light|dark]",
+            'help': "Available commands: whoami, skills, projects, contact, theme, ls, cd, cat, clear, hack",
             'whoami': 'BHASKAR P PITTALA (@BHASHER2229) - Cybersecurity Specialist',
             'skills': 'Python, Bash, Burp Suite, Metasploit, Nmap, Kali Linux, Penetration Testing',
             'projects': 'NotePass, Bug Hunting, Cybersecurity Home Lab',
             'contact': 'Email: pittalabhasker2@gmail.com | Phone: +91 8499948773',
             'theme': 'Usage: theme [light|dark]',
+            'ls': 'Sections: home, about, projects, skills, blog, contact',
+            'cd': 'Usage: cd [section_name]',
+            'cat': 'Usage: cat about.txt',
             'hack': 'Access Denied. Nice try! 😉',
             'clear': 'CLEAR_COMMAND'
         };
@@ -500,71 +504,7 @@ class TerminalEasterEgg {
             </div>
         `;
 
-        // Styles
-        const styles = `
-            .easter-egg-terminal {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 600px;
-                max-width: 90vw;
-                height: 400px;
-                background: var(--color-background);
-                border: 1px solid var(--color-primary);
-                border-radius: 8px;
-                z-index: 10001;
-                font-family: 'Fira Code', monospace;
-                overflow: hidden;
-                box-shadow: 0 0 30px rgba(var(--color-primary-rgb), 0.3);
-            }
-            .terminal-content {
-                padding: 1rem;
-                height: calc(100% - 40px);
-                overflow-y: auto;
-                color: var(--color-text);
-            }
-            .terminal-input {
-                background: transparent;
-                border: none;
-                color: var(--color-text);
-                font-family: 'Fira Code', monospace;
-                outline: none;
-                flex: 1;
-                font-size: 14px;
-            }
-            .terminal-input-line {
-                display: flex;
-                align-items: center;
-                margin-top: 1rem;
-            }
-            .terminal-prompt {
-                color: var(--color-primary);
-                margin-right: 0.5rem;
-            }
-            .close-terminal {
-                background: var(--color-error);
-                border: none;
-                color: var(--color-btn-primary-text);
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                cursor: pointer;
-                margin-left: auto;
-                font-size: 14px;
-            }
-            .close-terminal:hover {
-                opacity: 0.8;
-            }
-        `;
-
-        // Add styles
-        if (!document.getElementById('terminal-styles')) {
-            const styleSheet = document.createElement('style');
-            styleSheet.id = 'terminal-styles';
-            styleSheet.textContent = styles;
-            document.head.appendChild(styleSheet);
-        }
+        // The styles for the terminal have been moved to style.css
 
         document.body.appendChild(terminal);
 
@@ -621,6 +561,33 @@ class TerminalEasterEgg {
                 responseDiv.textContent = `Theme set to ${arg} mode.`;
             } else {
                 responseDiv.textContent = this.commands['theme'];
+            }
+        } else if (cmd === 'cd') {
+            const sections = ['home', 'about', 'projects', 'skills', 'blog', 'contact'];
+            if (arg && sections.includes(arg)) {
+                // Close terminal before scrolling
+                const terminalElement = output.closest('.easter-egg-terminal');
+                if (terminalElement) {
+                    terminalElement.parentNode.removeChild(terminalElement);
+                }
+
+                // Use a mock event object for handleNavClick
+                const mockEvent = {
+                    currentTarget: { getAttribute: () => `#${arg}` },
+                    preventDefault: () => {}
+                };
+                this.portfolioApp.handleNavClick(mockEvent);
+                responseDiv.textContent = `Navigating to ${arg}...`;
+
+            } else {
+                responseDiv.textContent = this.commands['cd'];
+            }
+        } else if (cmd === 'cat') {
+            if (arg === 'about.txt') {
+                const aboutBio = document.querySelector('.about-bio')?.textContent;
+                responseDiv.innerHTML = aboutBio ? aboutBio.replace(/\n/g, '<br>') : 'about.txt not found.';
+            } else {
+                responseDiv.textContent = this.commands['cat'];
             }
         } else {
             const response = this.commands[cmd] || `Command not found: ${command}. Type 'help' for available commands.`;
@@ -711,8 +678,8 @@ class MatrixRain {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new CyberPortfolio();
-    new TerminalEasterEgg();
+    const app = new CyberPortfolio();
+    new TerminalEasterEgg(app);
     
     // Optional matrix effect after loading
     setTimeout(() => {
