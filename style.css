@@ -22,14 +22,18 @@
   --color-red-500: rgba(192, 21, 47, 1);
   --color-orange-400: rgba(230, 129, 97, 1);
   --color-orange-500: rgba(168, 75, 47, 1);
+  --color-green-400: rgba(50, 205, 50, 1);
+  --color-green-500: rgba(46, 184, 46, 1);
+  --color-green-600: rgba(40, 161, 40, 1);
 
   /* RGB versions for opacity control */
   --color-gray-400-rgb: 119, 124, 124;
+  --color-green-400-rgb: 50, 205, 50;
   --color-teal-300-rgb: 50, 184, 198;
   --color-gray-300-rgb: 167, 169, 169;
   --color-gray-200-rgb: 245, 245, 245;
-  --color-background-rgb: 31, 33, 33;
-  --color-primary-rgb: 50, 184, 198;
+  --color-background-rgb: 0, 0, 0;
+  --color-primary-rgb: 50, 205, 50;
   --color-red-400-rgb: 255, 84, 89;
   --color-orange-400-rgb: 230, 129, 97;
 
@@ -44,13 +48,13 @@
   --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
 
   /* Semantic Color Tokens (Dark Mode) */
-  --color-background: var(--color-charcoal-700);
+  --color-background: var(--color-black);
   --color-surface: var(--color-charcoal-800);
   --color-text: var(--color-gray-200);
   --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
-  --color-primary: var(--color-teal-300);
-  --color-primary-hover: var(--color-teal-400);
-  --color-primary-active: var(--color-teal-800);
+  --color-primary: var(--color-green-400);
+  --color-primary-hover: var(--color-green-500);
+  --color-primary-active: var(--color-green-600);
   --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
   --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
   --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
@@ -602,7 +606,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Code', monospace;
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
@@ -1020,9 +1024,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .keyword { color: #FF6B6B; }
-.module { color: #4ECDC4; }
+.module { color: var(--color-green-400); }
 .function { color: #FFD93D; }
-.string { color: #6BCF7F; }
+.string { color: var(--color-green-400); }
 .param { color: var(--color-text-secondary); }
 
 @keyframes codeAppear {
@@ -1046,7 +1050,7 @@ section {
 }
 
 .section-prompt {
-    color: var(--color-primary);
+    color: var(--color-green-400);
 }
 
 /* About Section */
@@ -1186,6 +1190,10 @@ section {
     font-size: 0.8rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: var(--color-text-secondary);
 }
 
 .timeline-meta span {
