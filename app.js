@@ -454,12 +454,11 @@ class TerminalEasterEgg {
     constructor(portfolioApp) {
         this.portfolioApp = portfolioApp;
         this.commands = {
-            'help': "Available commands: whoami, skills, projects, contact, theme, ls, cd, cat, clear, hack",
+            'help': "Available commands: whoami, skills, projects, contact, ls, cd, cat, clear, hack",
             'whoami': 'BHASKAR P PITTALA (@BHASHER2229) - Cybersecurity Specialist',
             'skills': 'Python, Bash, Burp Suite, Metasploit, Nmap, Kali Linux, Penetration Testing',
             'projects': 'NotePass, Bug Hunting, Cybersecurity Home Lab',
             'contact': 'Email: pittalabhasker2@gmail.com | Phone: +91 8499948773',
-            'theme': 'Usage: theme [light|dark]',
             'ls': 'Sections: home, about, projects, skills, blog, contact',
             'cd': 'Usage: cd [section_name]',
             'cat': 'Usage: cat about.txt',
@@ -539,7 +538,7 @@ class TerminalEasterEgg {
 
     executeCommand(command, output) {
         const commandDiv = document.createElement('div');
-        commandDiv.innerHTML = `<span style="color: var(--color-primary);">guest@portfolio:~$ </span>${command}`;
+        commandDiv.innerHTML = `<span class="terminal-prompt-prefix">guest@portfolio:~$ </span>${command}`;
         output.appendChild(commandDiv);
 
         const responseDiv = document.createElement('div');
@@ -555,14 +554,7 @@ class TerminalEasterEgg {
             return;
         }
 
-        if (cmd === 'theme') {
-            if (arg === 'light' || arg === 'dark') {
-                document.documentElement.setAttribute('data-color-scheme', arg);
-                responseDiv.textContent = `Theme set to ${arg} mode.`;
-            } else {
-                responseDiv.textContent = this.commands['theme'];
-            }
-        } else if (cmd === 'cd') {
+        if (cmd === 'cd') {
             const sections = ['home', 'about', 'projects', 'skills', 'blog', 'contact'];
             if (arg && sections.includes(arg)) {
                 // Close terminal before scrolling
