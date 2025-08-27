@@ -152,9 +152,9 @@
     /* RGB versions for opacity control (Dark Mode) */
     --color-gray-400-rgb: 119, 124, 124;
     --color-teal-300-rgb: 50, 184, 198;
-    --color-gray-300-rgb: 167, 169, 169;
+ --color-gray-300-rgb: 167, 169, 169;
     --color-gray-200-rgb: 245, 245, 245;
-    --color-background-rgb: 31, 33, 33;
+ --color-background-rgb: 31, 33, 33;
     --color-primary-rgb: 21, 128, 61; /* Green */
     
     /* Background color tokens (Dark Mode) */
@@ -169,18 +169,18 @@
     
     /* Semantic Color Tokens (Dark Mode) */
     --color-background: var(--color-charcoal-700);
-    --color-surface: var(--color-charcoal-800);
+ --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
-    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-text-secondary: var(--color-gray-300); /* Ensure sufficient contrast */
     --color-primary: var(--color-bg-3); /* Use the dark green background color */
     --color-primary-hover: rgba(21, 128, 61, 0.8); /* Slightly more opaque green */
     --color-primary-active: rgba(21, 128, 61, 1); /* Solid green */
     --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
     --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
     --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: var(--color-gray-400); /* Use solid color for border */
     --color-error: var(--color-red-400);
-    --color-success: var(--color-teal-300);
+    --color-success: var(--color-teal-300); /* Teal is fine for success in this theme */
     --color-warning: var(--color-orange-400);
  --color-info: var(--color-gray-300);
  --color-focus-ring: rgba(21, 128, 61, 0.4); /* Green focus ring */
@@ -214,9 +214,9 @@
   /* RGB versions for opacity control (dark mode) */
   --color-gray-400-rgb: 119, 124, 124;
   --color-teal-300-rgb: 50, 184, 198;
-  --color-gray-300-rgb: 167, 169, 169;
+ --color-gray-300-rgb: 167, 169, 169;
   --color-gray-200-rgb: 245, 245, 245;
-  --color-background-rgb: 31, 33, 33;
+ --color-background-rgb: 31, 33, 33;
   --color-primary-rgb: 21, 128, 61; /* Green */
 
   /* Colorful background palette - Dark Mode */
@@ -231,18 +231,18 @@
   
   /* Semantic Color Tokens (Dark Mode) */
   --color-background: var(--color-charcoal-700);
-  --color-surface: var(--color-charcoal-800);
+ --color-surface: var(--color-charcoal-800);
   --color-text: var(--color-gray-200);
-  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-text-secondary: var(--color-gray-300); /* Ensure sufficient contrast */
   --color-primary: var(--color-bg-3); /* Use the dark green background color */
   --color-primary-hover: rgba(21, 128, 61, 0.8); /* Slightly more opaque green */
   --color-primary-active: rgba(21, 128, 61, 1); /* Solid green */
   --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
   --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
   --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: var(--color-gray-400); /* Use solid color for border */
   --color-error: var(--color-red-400);
-  --color-success: var(--color-teal-300);
+  --color-success: var(--color-teal-300); /* Teal is fine for success in this theme */
   --color-warning: var(--color-orange-400);
   --color-info: var(--color-gray-300);
   --color-focus-ring: rgba(21, 128, 61, 0.4); /* Green focus ring */
@@ -274,10 +274,10 @@
   --color-brown-600-rgb: 94, 82, 64;
   --color-teal-500-rgb: 33, 128, 141;
   --color-slate-900-rgb: 19, 52, 59;
-  --color-background-rgb: 252, 252, 249;
+ --color-background-rgb: 252, 252, 249;
   --color-primary-rgb: 33, 128, 141;
   
-  /* Semantic Color Tokens (Light Mode) */
+  /* Semantic Color Tokens (Light Mode - Keep original for now) */
   --color-background: var(--color-cream-50);
   --color-surface: var(--color-cream-100);
   --color-text: var(--color-slate-900);
@@ -336,7 +336,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
+  line-height: var(--line-height-normal); /* Adjusted for better readability */
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
 }
@@ -361,7 +361,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 var(--space-16) 0;
+  margin: 0 0 var(--space-16) 0; /* Keep standard paragraph spacing */
 }
 
 a {
@@ -389,7 +389,7 @@ code {
 pre {
   padding: var(--space-16);
   margin: var(--space-16) 0;
-  overflow: auto;
+  overflow-x: auto; /* Only horizontal scroll for code blocks */
   border: 1px solid var(--color-border);
 }
 
@@ -406,7 +406,7 @@ pre code {
   padding: var(--space-8) var(--space-16);
   border-radius: var(--radius-base);
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium); /* Consistent font weight */
   line-height: 1.5;
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
@@ -435,7 +435,7 @@ pre code {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--color-text); /* Ensure sufficient contrast */
 }
 
 .btn--secondary:hover {
@@ -449,7 +449,7 @@ pre code {
 .btn--outline {
   background: transparent;
   border: 1px solid var(--color-border);
-  color: var(--color-text);
+  color: var(--color-text); /* Ensure sufficient contrast */
 }
 
 .btn--outline:hover {
@@ -526,7 +526,7 @@ select.form-control {
 }
 
 .form-control:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary); /* Standard focus style */
   outline: var(--focus-outline);
 }
 
@@ -576,33 +576,22 @@ select.form-control {
 }
 
 .status--success {
-  background-color: rgba(
-    var(--color-success-rgb, 33, 128, 141),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-success-rgb), 0.15);
   color: var(--color-success);
-  border: 1px solid
-    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-success-rgb), 0.25);
 }
 
 .status--error {
-  background-color: rgba(
-    var(--color-error-rgb, 192, 21, 47),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-error-rgb), 0.15);
   color: var(--color-error);
-  border: 1px solid
-    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
+  border: 1px solid rgba(var(--color-error-rgb), 0.25);
 }
 
 .status--warning {
-  background-color: rgba(
-    var(--color-warning-rgb, 168, 75, 47),
-    var(--status-bg-opacity)
-  );
+  background-color: rgba(var(--color-warning-rgb), 0.15);
   color: var(--color-warning);
   border: 1px solid
-    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
+    rgba(var(--color-warning-rgb), 0.25);
 }
 
 .status--info {
@@ -768,7 +757,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fira Code', monospace;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold); /* Use consistent font weight */
     margin-bottom: 1rem;
 }
 
@@ -996,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-name {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Keep large size for hero name */
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 0.5rem;
@@ -1006,13 +995,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-handle {
     font-size: 1.5rem;
     color: var(--color-primary);
-    margin-bottom: 1rem;
-    font-weight: 400;
+    margin-bottom: 1rem; /* Keep standard spacing */
+    font-weight: var(--font-weight-normal); /* Use consistent font weight */
 }
 
 .hero-tagline {
     font-size: 1.2rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary); /* Keep secondary color for tagline */
     margin-bottom: 2rem;
     font-family: 'Fira Code', monospace;
 }
@@ -1052,7 +1041,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
     background: var(--color-primary);
     color: var(--color-btn-primary-text);
-    font-weight: 600;
+    font-weight: var(--font-weight-bold); /* Bold for primary button */
 }
 
 .btn-primary:hover {
@@ -1068,7 +1057,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background: var(--color-primary);
+    background: var(--color-secondary-hover); /* Use secondary hover color */
     color: var(--color-btn-primary-text);
     transform: translateY(-2px);
 }
@@ -1095,7 +1084,7 @@ h1, h2, h3, h4, h5, h6 {
 .social-link:hover {
     background: var(--color-primary);
     color: var(--color-btn-primary-text);
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Keep hover effect */
     border-color: var(--color-primary);
 }
 
@@ -1211,7 +1200,7 @@ section {
 }
 
 .about-bio {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Keep readability */
     line-height: 1.8;
     margin-bottom: 2rem;
     color: var(--color-text-secondary);
@@ -1280,7 +1269,7 @@ section {
 }
 
 .filter-btn {
-    background: transparent;
+    background: transparent; /* Keep transparent background */
     color: var(--color-text-secondary);
     border: 1px solid var(--color-border);
     padding: 0.5rem 1rem;
@@ -1293,7 +1282,7 @@ section {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--color-primary);
+    background: var(--color-primary); /* Keep highlight */
     color: var(--color-btn-primary-text);
     border-color: var(--color-primary);
 }
@@ -1331,7 +1320,7 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Keep hover effect */
     border-color: var(--color-primary);
     box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
 }
@@ -1357,7 +1346,7 @@ section {
 
 .project-description {
     color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Keep standard spacing */
     line-height: 1.6;
 }
 
@@ -1415,7 +1404,7 @@ section {
 }
 
 .project-link:hover {
-    color: var(--color-text);
+    color: var(--color-text); /* Keep hover effect */
     transform: translateX(5px);
 }
 
@@ -1491,7 +1480,7 @@ section {
 }
 
 .skill-progress::after {
-    content: '';
+    content: ''; /* Keep shimmer effect */
     position: absolute;
     top: 0;
     left: 0;
@@ -1548,7 +1537,7 @@ section {
 }
 
 .blog-post:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Keep hover effect */
     border-color: var(--color-primary);
     box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
 }
@@ -1569,7 +1558,7 @@ section {
 }
 
 .post-excerpt {
-    color: var(--color-text-secondary);
+    color: var(--color-text-secondary); /* Keep secondary color */
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -1600,7 +1589,7 @@ section {
 }
 
 .read-more:hover {
-    color: var(--color-text);
+    color: var(--color-text); /* Keep hover effect */
     transform: translateX(5px);
 }
 
@@ -1682,7 +1671,7 @@ section {
 }
 
 .form-input:focus,
-.form-textarea:focus {
+.form-textarea:focus { /* Standard focus style */
     outline: none;
     border-color: var(--color-primary);
 }
@@ -1727,7 +1716,7 @@ section {
 }
 
 .footer-link:hover {
-    color: var(--color-text);
+    color: var(--color-text); /* Keep hover effect */
 }
 
 /* Responsive Design */
