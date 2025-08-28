@@ -401,8 +401,16 @@ Cybersecurity Intern - PNH Consulting Pvt. Ltd. (May 2024 - Dec 2024)
         // Add/remove navbar shadow on scroll
         if (scrollTop > 100) {
             navbar?.classList.add('scrolled');
+            if (navbar) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 255, 209, 0.1)';
+            }
         } else {
             navbar?.classList.remove('scrolled');
+            if (navbar) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
         }
 
         // Update active navigation link
@@ -453,12 +461,11 @@ Cybersecurity Intern - PNH Consulting Pvt. Ltd. (May 2024 - Dec 2024)
 class TerminalEasterEgg {
     constructor() {
         this.commands = {
-            'help': "Available commands: whoami, skills, projects, contact, clear, hack, theme [light|dark]",
+            'help': 'Available commands: whoami, skills, projects, contact, clear, hack',
             'whoami': 'BHASKAR P PITTALA (@BHASHER2229) - Cybersecurity Specialist',
             'skills': 'Python, Bash, Burp Suite, Metasploit, Nmap, Kali Linux, Penetration Testing',
             'projects': 'NotePass, Bug Hunting, Cybersecurity Home Lab',
             'contact': 'Email: pittalabhasker2@gmail.com | Phone: +91 8499948773',
-            'theme': 'Usage: theme [light|dark]',
             'hack': 'Access Denied. Nice try! 😉',
             'clear': 'CLEAR_COMMAND'
         };
@@ -510,24 +517,24 @@ class TerminalEasterEgg {
                 width: 600px;
                 max-width: 90vw;
                 height: 400px;
-                background: var(--color-background);
-                border: 1px solid var(--color-primary);
+                background: #000;
+                border: 1px solid #00FFD1;
                 border-radius: 8px;
                 z-index: 10001;
                 font-family: 'Fira Code', monospace;
                 overflow: hidden;
-                box-shadow: 0 0 30px rgba(var(--color-primary-rgb), 0.3);
+                box-shadow: 0 0 30px rgba(0, 255, 209, 0.3);
             }
             .terminal-content {
                 padding: 1rem;
                 height: calc(100% - 40px);
                 overflow-y: auto;
-                color: var(--color-text);
+                color: #00FFD1;
             }
             .terminal-input {
                 background: transparent;
                 border: none;
-                color: var(--color-text);
+                color: #00FFD1;
                 font-family: 'Fira Code', monospace;
                 outline: none;
                 flex: 1;
@@ -539,13 +546,13 @@ class TerminalEasterEgg {
                 margin-top: 1rem;
             }
             .terminal-prompt {
-                color: var(--color-primary);
+                color: #00FFD1;
                 margin-right: 0.5rem;
             }
             .close-terminal {
-                background: var(--color-error);
+                background: #FF6B6B;
                 border: none;
-                color: var(--color-btn-primary-text);
+                color: white;
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
@@ -554,7 +561,7 @@ class TerminalEasterEgg {
                 font-size: 14px;
             }
             .close-terminal:hover {
-                opacity: 0.8;
+                background: #ff5555;
             }
         `;
 
@@ -599,15 +606,13 @@ class TerminalEasterEgg {
 
     executeCommand(command, output) {
         const commandDiv = document.createElement('div');
-        commandDiv.innerHTML = `<span style="color: var(--color-primary);">guest@portfolio:~$ </span>${command}`;
+        commandDiv.innerHTML = `<span style="color: #00FFD1;">guest@portfolio:~$ </span>${command}`;
         output.appendChild(commandDiv);
 
         const responseDiv = document.createElement('div');
         responseDiv.style.marginBottom = '1rem';
 
-        const [cmd, arg] = command.toLowerCase().split(' ');
-
-        if (cmd === 'clear') {
+        if (command === 'clear') {
             output.innerHTML = `
                 <div>Welcome to BHASHER2229's Terminal</div>
                 <div>Type 'help' for available commands</div>
@@ -615,18 +620,8 @@ class TerminalEasterEgg {
             return;
         }
 
-        if (cmd === 'theme') {
-            if (arg === 'light' || arg === 'dark') {
-                document.documentElement.setAttribute('data-color-scheme', arg);
-                responseDiv.textContent = `Theme set to ${arg} mode.`;
-            } else {
-                responseDiv.textContent = this.commands['theme'];
-            }
-        } else {
-            const response = this.commands[cmd] || `Command not found: ${command}. Type 'help' for available commands.`;
-            responseDiv.textContent = response;
-        }
-
+        const response = this.commands[command] || `Command not found: ${command}. Type 'help' for available commands.`;
+        responseDiv.textContent = response;
         output.appendChild(responseDiv);
 
         // Scroll to bottom
