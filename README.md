@@ -3,7 +3,7 @@
 
 This is the source code for a personal portfolio website for a cybersecurity professional. It is designed with a dark, terminal-inspired theme to reflect the owner's field of expertise.
 
-**Live Demo:** [bhaskar-portfolio.com](https://bhaskar-portfolio.com) (placeholder link)
+**Live Demo:** [bhaskar-portfolio.com]((https://bhasher2229.github.io/Cyber-invention/)) (placeholder link)
 
 ## Features
 
