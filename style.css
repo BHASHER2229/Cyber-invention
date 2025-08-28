@@ -32,8 +32,6 @@
   --color-red-400-rgb: 255, 84, 89;
   --color-orange-500-rgb: 168, 75, 47;
   --color-orange-400-rgb: 230, 129, 97;
-  --color-background-rgb: 252, 252, 249;
-  --color-primary-rgb: 33, 128, 141;
 
   /* Background color tokens (Light Mode) */
   --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
@@ -152,11 +150,9 @@
     /* RGB versions for opacity control (Dark Mode) */
     --color-gray-400-rgb: 119, 124, 124;
     --color-teal-300-rgb: 50, 184, 198;
- --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-300-rgb: 167, 169, 169;
     --color-gray-200-rgb: 245, 245, 245;
- --color-background-rgb: 31, 33, 33;
-    --color-primary-rgb: 21, 128, 61; /* Green */
-    
+
     /* Background color tokens (Dark Mode) */
     --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
     --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
@@ -169,24 +165,24 @@
     
     /* Semantic Color Tokens (Dark Mode) */
     --color-background: var(--color-charcoal-700);
- --color-surface: var(--color-charcoal-800);
+    --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
-    --color-text-secondary: var(--color-gray-300); /* Ensure sufficient contrast */
-    --color-primary: var(--color-bg-3); /* Use the dark green background color */
-    --color-primary-hover: rgba(21, 128, 61, 0.8); /* Slightly more opaque green */
-    --color-primary-active: rgba(21, 128, 61, 1); /* Solid green */
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
     --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
     --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
     --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-    --color-border: var(--color-gray-400); /* Use solid color for border */
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
     --color-error: var(--color-red-400);
-    --color-success: var(--color-teal-300); /* Teal is fine for success in this theme */
+    --color-success: var(--color-teal-300);
     --color-warning: var(--color-orange-400);
- --color-info: var(--color-gray-300);
- --color-focus-ring: rgba(21, 128, 61, 0.4); /* Green focus ring */
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
     --color-btn-primary-text: var(--color-slate-900);
     --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
- --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
     --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
       inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
@@ -202,7 +198,7 @@
     --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 
     /* RGB versions for dark mode */
- --color-success-rgb: 21, 128, 61; /* Green */
+    --color-success-rgb: var(--color-teal-300-rgb);
     --color-error-rgb: var(--color-red-400-rgb);
     --color-warning-rgb: var(--color-orange-400-rgb);
     --color-info-rgb: var(--color-gray-300-rgb);
@@ -214,10 +210,8 @@
   /* RGB versions for opacity control (dark mode) */
   --color-gray-400-rgb: 119, 124, 124;
   --color-teal-300-rgb: 50, 184, 198;
- --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-300-rgb: 167, 169, 169;
   --color-gray-200-rgb: 245, 245, 245;
- --color-background-rgb: 31, 33, 33;
-  --color-primary-rgb: 21, 128, 61; /* Green */
 
   /* Colorful background palette - Dark Mode */
   --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
@@ -231,21 +225,21 @@
   
   /* Semantic Color Tokens (Dark Mode) */
   --color-background: var(--color-charcoal-700);
- --color-surface: var(--color-charcoal-800);
+  --color-surface: var(--color-charcoal-800);
   --color-text: var(--color-gray-200);
-  --color-text-secondary: var(--color-gray-300); /* Ensure sufficient contrast */
-  --color-primary: var(--color-bg-3); /* Use the dark green background color */
-  --color-primary-hover: rgba(21, 128, 61, 0.8); /* Slightly more opaque green */
-  --color-primary-active: rgba(21, 128, 61, 1); /* Solid green */
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
   --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
   --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
   --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
-  --color-border: var(--color-gray-400); /* Use solid color for border */
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
   --color-error: var(--color-red-400);
-  --color-success: var(--color-teal-300); /* Teal is fine for success in this theme */
+  --color-success: var(--color-teal-300);
   --color-warning: var(--color-orange-400);
   --color-info: var(--color-gray-300);
-  --color-focus-ring: rgba(21, 128, 61, 0.4); /* Green focus ring */
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
   --color-btn-primary-text: var(--color-slate-900);
   --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
   --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
@@ -263,7 +257,7 @@
   --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 
   /* RGB versions for dark mode */
-  --color-success-rgb: 21, 128, 61; /* Green */
+  --color-success-rgb: var(--color-teal-300-rgb);
   --color-error-rgb: var(--color-red-400-rgb);
   --color-warning-rgb: var(--color-orange-400-rgb);
   --color-info-rgb: var(--color-gray-300-rgb);
@@ -274,10 +268,8 @@
   --color-brown-600-rgb: 94, 82, 64;
   --color-teal-500-rgb: 33, 128, 141;
   --color-slate-900-rgb: 19, 52, 59;
- --color-background-rgb: 252, 252, 249;
-  --color-primary-rgb: 33, 128, 141;
   
-  /* Semantic Color Tokens (Light Mode - Keep original for now) */
+  /* Semantic Color Tokens (Light Mode) */
   --color-background: var(--color-cream-50);
   --color-surface: var(--color-cream-100);
   --color-text: var(--color-slate-900);
@@ -336,7 +328,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-normal); /* Adjusted for better readability */
+  line-height: var(--line-height-tight);
   color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
 }
@@ -361,7 +353,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 var(--space-16) 0; /* Keep standard paragraph spacing */
+  margin: 0 0 var(--space-16) 0;
 }
 
 a {
@@ -389,7 +381,7 @@ code {
 pre {
   padding: var(--space-16);
   margin: var(--space-16) 0;
-  overflow-x: auto; /* Only horizontal scroll for code blocks */
+  overflow: auto;
   border: 1px solid var(--color-border);
 }
 
@@ -406,7 +398,7 @@ pre code {
   padding: var(--space-8) var(--space-16);
   border-radius: var(--radius-base);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium); /* Consistent font weight */
+  font-weight: 500;
   line-height: 1.5;
   cursor: pointer;
   transition: all var(--duration-normal) var(--ease-standard);
@@ -435,7 +427,7 @@ pre code {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: var(--color-text); /* Ensure sufficient contrast */
+  color: var(--color-text);
 }
 
 .btn--secondary:hover {
@@ -449,7 +441,7 @@ pre code {
 .btn--outline {
   background: transparent;
   border: 1px solid var(--color-border);
-  color: var(--color-text); /* Ensure sufficient contrast */
+  color: var(--color-text);
 }
 
 .btn--outline:hover {
@@ -526,7 +518,7 @@ select.form-control {
 }
 
 .form-control:focus {
-  border-color: var(--color-primary); /* Standard focus style */
+  border-color: var(--color-primary);
   outline: var(--focus-outline);
 }
 
@@ -576,22 +568,33 @@ select.form-control {
 }
 
 .status--success {
-  background-color: rgba(var(--color-success-rgb), 0.15);
+  background-color: rgba(
+    var(--color-success-rgb, 33, 128, 141),
+    var(--status-bg-opacity)
+  );
   color: var(--color-success);
-  border: 1px solid rgba(var(--color-success-rgb), 0.25);
+  border: 1px solid
+    rgba(var(--color-success-rgb, 33, 128, 141), var(--status-border-opacity));
 }
 
 .status--error {
-  background-color: rgba(var(--color-error-rgb), 0.15);
+  background-color: rgba(
+    var(--color-error-rgb, 192, 21, 47),
+    var(--status-bg-opacity)
+  );
   color: var(--color-error);
-  border: 1px solid rgba(var(--color-error-rgb), 0.25);
+  border: 1px solid
+    rgba(var(--color-error-rgb, 192, 21, 47), var(--status-border-opacity));
 }
 
 .status--warning {
-  background-color: rgba(var(--color-warning-rgb), 0.15);
+  background-color: rgba(
+    var(--color-warning-rgb, 168, 75, 47),
+    var(--status-bg-opacity)
+  );
   color: var(--color-warning);
   border: 1px solid
-    rgba(var(--color-warning-rgb), 0.25);
+    rgba(var(--color-warning-rgb, 168, 75, 47), var(--status-border-opacity));
 }
 
 .status--info {
@@ -748,8 +751,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: #000000;
+    color: #FFFFFF;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -757,7 +760,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fira Code', monospace;
-    font-weight: var(--font-weight-semibold); /* Use consistent font weight */
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -774,7 +777,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-background);
+    background: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -789,7 +792,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .terminal-boot {
     font-family: 'Fira Code', monospace;
-    color: var(--color-primary);
+    color: #00FFD1;
     text-align: left;
 }
 
@@ -807,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 .progress-bar {
     width: 300px;
     height: 4px;
-    background: var(--color-border);
+    background: #333;
     margin-top: 1rem;
     border-radius: 2px;
     overflow: hidden;
@@ -815,7 +818,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress-fill {
     height: 100%;
-    background: var(--color-primary);
+    background: #00FFD1;
     width: 0%;
     animation: progressFill 2s ease-in-out 2.5s forwards;
 }
@@ -834,17 +837,12 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(var(--color-background-rgb), 0.85);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #333;
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(var(--color-background-rgb), 0.98);
-    box-shadow: 0 2px 20px rgba(var(--color-primary-rgb), 0.1);
 }
 
 .nav-container {
@@ -858,7 +856,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-brand {
     font-family: 'Fira Code', monospace;
-    color: var(--color-primary);
+    color: #00FFD1;
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -871,7 +869,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
     font-family: 'Fira Code', monospace;
-    color: var(--color-text);
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s ease;
@@ -879,7 +877,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link:hover {
-    color: var(--color-primary);
+    color: #00FFD1;
 }
 
 .nav-link::before {
@@ -889,7 +887,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--color-primary);
+    background: #00FFD1;
     transition: width 0.3s ease;
 }
 
@@ -906,7 +904,7 @@ h1, h2, h3, h4, h5, h6 {
 .bar {
     width: 25px;
     height: 3px;
-    background: var(--color-text);
+    background: #FFFFFF;
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -917,7 +915,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     padding: 8rem 0 4rem;
-    background: radial-gradient(ellipse at center, rgba(var(--color-primary-rgb), 0.1) 0%, rgba(var(--color-background-rgb), 1) 70%);
+    background: radial-gradient(ellipse at center, rgba(0, 255, 209, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
 }
 
 .hero-container {
@@ -931,22 +929,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .terminal-greeting {
-    background: var(--color-surface);
+    background: #0a0a0a;
     border-radius: 8px;
     margin-bottom: 2rem;
-    border: 1px solid var(--color-border);
+    border: 1px solid #333;
     overflow: hidden;
 }
 
 .terminal-header {
-    background: var(--color-secondary);
+    background: #1a1a1a;
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    color: var(--color-text-secondary);
+    color: #999;
 }
 
 .terminal-dot {
@@ -970,45 +968,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prompt {
-    color: var(--color-primary);
+    color: #00FFD1;
     margin-right: 0.5rem;
 }
 
 .command {
-    color: var(--color-text);
+    color: #FFFFFF;
 }
 
 .terminal-output {
-    color: var(--color-primary);
+    color: #00FFD1;
     margin-left: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .hero-name {
-    font-size: 3.5rem; /* Keep large size for hero name */
+    font-size: 3.5rem;
     font-weight: 700;
-    color: var(--color-text);
+    color: #FFFFFF;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.3);
+    text-shadow: 0 0 20px rgba(0, 255, 209, 0.3);
 }
 
 .hero-handle {
     font-size: 1.5rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem; /* Keep standard spacing */
-    font-weight: var(--font-weight-normal); /* Use consistent font weight */
+    color: #00FFD1;
+    margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .hero-tagline {
     font-size: 1.2rem;
-    color: var(--color-text-secondary); /* Keep secondary color for tagline */
+    color: #CCCCCC;
     margin-bottom: 2rem;
     font-family: 'Fira Code', monospace;
 }
 
 .cursor {
     animation: blink 1s infinite;
-    color: var(--color-primary);
+    color: #00FFD1;
 }
 
 @keyframes blink {
@@ -1039,26 +1037,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--color-primary);
-    color: var(--color-btn-primary-text);
-    font-weight: var(--font-weight-bold); /* Bold for primary button */
+    background: #00FFD1;
+    color: #000000;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: var(--color-primary-hover);
+    background: #00E6BC;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(var(--color-primary-rgb), 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 209, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--color-text);
-    border: 1px solid var(--color-primary);
+    color: #FFFFFF;
+    border: 1px solid #00FFD1;
 }
 
 .btn-secondary:hover {
-    background: var(--color-secondary-hover); /* Use secondary hover color */
-    color: var(--color-btn-primary-text);
+    background: #00FFD1;
+    color: #000000;
     transform: translateY(-2px);
 }
 
@@ -1070,22 +1068,22 @@ h1, h2, h3, h4, h5, h6 {
 .social-link {
     width: 40px;
     height: 40px;
-    background: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-text);
+    color: #FFFFFF;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
 .social-link:hover {
-    background: var(--color-primary);
-    color: var(--color-btn-primary-text);
-    transform: translateY(-3px); /* Keep hover effect */
-    border-color: var(--color-primary);
+    background: #00FFD1;
+    color: #000000;
+    transform: translateY(-3px);
+    border-color: #00FFD1;
 }
 
 .social-link svg {
@@ -1101,23 +1099,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .code-window {
-    background: var(--color-surface);
+    background: #0a0a0a;
     border-radius: 8px;
-    border: 1px solid var(--color-border);
+    border: 1px solid #333;
     overflow: hidden;
     width: 100%;
     max-width: 500px;
 }
 
 .code-header {
-    background: var(--color-secondary);
+    background: #1a1a1a;
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    color: var(--color-text-secondary);
+    color: #999;
 }
 
 .code-dot {
@@ -1154,7 +1152,7 @@ h1, h2, h3, h4, h5, h6 {
 .code-line:nth-child(8) { animation-delay: 2.6s; }
 
 .line-number {
-    color: var(--color-text-secondary);
+    color: #666;
     margin-right: 1rem;
     min-width: 20px;
     text-align: right;
@@ -1164,7 +1162,7 @@ h1, h2, h3, h4, h5, h6 {
 .module { color: #4ECDC4; }
 .function { color: #FFD93D; }
 .string { color: #6BCF7F; }
-.param { color: var(--color-text-secondary); }
+.param { color: #CCCCCC; }
 
 @keyframes codeAppear {
     to { opacity: 1; }
@@ -1180,14 +1178,14 @@ section {
     font-size: 2rem;
     margin-bottom: 3rem;
     font-family: 'Fira Code', monospace;
-    color: var(--color-text);
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 .section-prompt {
-    color: var(--color-primary);
+    color: #00FFD1;
 }
 
 /* About Section */
@@ -1200,10 +1198,10 @@ section {
 }
 
 .about-bio {
-    font-size: 1.1rem; /* Keep readability */
+    font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    color: var(--color-text-secondary);
+    color: #CCCCCC;
 }
 
 .about-details {
@@ -1218,17 +1216,17 @@ section {
 }
 
 .detail-label {
-    color: var(--color-primary);
+    color: #00FFD1;
     min-width: 150px;
     margin-right: 1rem;
 }
 
 .detail-value {
-    color: var(--color-text);
+    color: #FFFFFF;
 }
 
 .tech-stack h3 {
-    color: var(--color-text);
+    color: #FFFFFF;
     margin-bottom: 1rem;
     font-family: 'Fira Code', monospace;
 }
@@ -1240,18 +1238,18 @@ section {
 }
 
 .tech-badge {
-    background: rgba(var(--color-primary-rgb), 0.1);
-    color: var(--color-primary);
+    background: rgba(0, 255, 209, 0.1);
+    color: #00FFD1;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+    border: 1px solid rgba(0, 255, 209, 0.3);
     transition: all 0.3s ease;
 }
 
 .tech-badge:hover {
-    background: rgba(var(--color-primary-rgb), 0.2);
+    background: rgba(0, 255, 209, 0.2);
     transform: translateY(-2px);
 }
 
@@ -1269,9 +1267,9 @@ section {
 }
 
 .filter-btn {
-    background: transparent; /* Keep transparent background */
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-border);
+    background: transparent;
+    color: #CCCCCC;
+    border: 1px solid #333;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     font-family: 'Fira Code', monospace;
@@ -1282,9 +1280,9 @@ section {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--color-primary); /* Keep highlight */
-    color: var(--color-btn-primary-text);
-    border-color: var(--color-primary);
+    background: #00FFD1;
+    color: #000000;
+    border-color: #00FFD1;
 }
 
 .projects-grid {
@@ -1294,8 +1292,8 @@ section {
 }
 
 .project-card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -1310,7 +1308,7 @@ section {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+    background: linear-gradient(90deg, #00FFD1, #4ECDC4);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -1320,9 +1318,9 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Keep hover effect */
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
+    transform: translateY(-5px);
+    border-color: #00FFD1;
+    box-shadow: 0 10px 30px rgba(0, 255, 209, 0.1);
 }
 
 .project-header {
@@ -1334,19 +1332,19 @@ section {
 
 .project-title {
     font-size: 1.3rem;
-    color: var(--color-text);
+    color: #FFFFFF;
     margin-bottom: 0.5rem;
 }
 
 .project-duration {
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    color: var(--color-primary);
+    color: #00FFD1;
 }
 
 .project-description {
-    color: var(--color-text-secondary);
-    margin-bottom: 1.5rem; /* Keep standard spacing */
+    color: #CCCCCC;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
@@ -1358,13 +1356,13 @@ section {
 }
 
 .tech-tag {
-    background: rgba(var(--color-primary-rgb), 0.1);
-    color: var(--color-primary-hover);
+    background: rgba(76, 205, 196, 0.1);
+    color: #4ECDC4;
     padding: 0.2rem 0.6rem;
     border-radius: 3px;
     font-family: 'Fira Code', monospace;
     font-size: 0.7rem;
-    border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+    border: 1px solid rgba(76, 205, 196, 0.3);
 }
 
 .project-features ul {
@@ -1373,7 +1371,7 @@ section {
 }
 
 .project-features li {
-    color: var(--color-text-secondary);
+    color: #CCCCCC;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     position: relative;
@@ -1382,7 +1380,7 @@ section {
 
 .project-features li::before {
     content: '▸';
-    color: var(--color-primary);
+    color: #00FFD1;
     position: absolute;
     left: 0;
 }
@@ -1396,7 +1394,7 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--color-primary);
+    color: #00FFD1;
     text-decoration: none;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
@@ -1404,7 +1402,7 @@ section {
 }
 
 .project-link:hover {
-    color: var(--color-text); /* Keep hover effect */
+    color: #FFFFFF;
     transform: translateX(5px);
 }
 
@@ -1425,15 +1423,15 @@ section {
 }
 
 .skill-category {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 2rem;
 }
 
 .category-title {
     font-family: 'Fira Code', monospace;
-    color: var(--color-primary);
+    color: #00FFD1;
     font-size: 1.1rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -1452,19 +1450,19 @@ section {
 
 .skill-name {
     font-family: 'Fira Code', monospace;
-    color: var(--color-text);
+    color: #FFFFFF;
     font-size: 0.9rem;
 }
 
 .skill-percentage {
     font-family: 'Fira Code', monospace;
-    color: var(--color-primary);
+    color: #00FFD1;
     font-size: 0.8rem;
 }
 
 .skill-bar {
     height: 8px;
-    background: var(--color-secondary);
+    background: #222;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -1472,7 +1470,7 @@ section {
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+    background: linear-gradient(90deg, #00FFD1, #4ECDC4);
     width: 0%;
     border-radius: 4px;
     transition: width 2s ease;
@@ -1480,7 +1478,7 @@ section {
 }
 
 .skill-progress::after {
-    content: ''; /* Keep shimmer effect */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -1508,10 +1506,10 @@ section {
 .search-input {
     width: 100%;
     padding: 0.8rem 1rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 4px;
-    color: var(--color-text);
+    color: #FFFFFF;
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
@@ -1519,7 +1517,7 @@ section {
 
 .search-input:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: #00FFD1;
 }
 
 .blog-grid {
@@ -1529,17 +1527,17 @@ section {
 }
 
 .blog-post {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 2rem;
     transition: all 0.3s ease;
 }
 
 .blog-post:hover {
-    transform: translateY(-5px); /* Keep hover effect */
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.1);
+    transform: translateY(-5px);
+    border-color: #00FFD1;
+    box-shadow: 0 10px 30px rgba(0, 255, 209, 0.1);
 }
 
 .post-meta {
@@ -1548,17 +1546,17 @@ section {
     margin-bottom: 1rem;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
-    color: var(--color-primary);
+    color: #00FFD1;
 }
 
 .post-title {
-    color: var(--color-text);
+    color: #FFFFFF;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .post-excerpt {
-    color: var(--color-text-secondary); /* Keep secondary color */
+    color: #CCCCCC;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -1571,17 +1569,17 @@ section {
 }
 
 .tag {
-    background: rgba(var(--color-error-rgb), 0.1);
-    color: var(--color-error);
+    background: rgba(255, 107, 107, 0.1);
+    color: #FF6B6B;
     padding: 0.2rem 0.6rem;
     border-radius: 3px;
     font-family: 'Fira Code', monospace;
     font-size: 0.7rem;
-    border: 1px solid rgba(var(--color-error-rgb), 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.3);
 }
 
 .read-more {
-    color: var(--color-primary);
+    color: #00FFD1;
     text-decoration: none;
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
@@ -1589,7 +1587,7 @@ section {
 }
 
 .read-more:hover {
-    color: var(--color-text); /* Keep hover effect */
+    color: #FFFFFF;
     transform: translateX(5px);
 }
 
@@ -1611,8 +1609,8 @@ section {
 }
 
 .terminal-info {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -1625,22 +1623,22 @@ section {
 }
 
 .info-label {
-    color: var(--color-primary);
+    color: #00FFD1;
     min-width: 80px;
     margin-right: 1rem;
 }
 
 .info-value {
-    color: var(--color-text);
+    color: #FFFFFF;
 }
 
 .status-online {
-    color: var(--color-success);
+    color: #6BCF7F;
 }
 
 .contact-form {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 2rem;
 }
@@ -1651,7 +1649,7 @@ section {
 
 .form-label {
     display: block;
-    color: var(--color-primary);
+    color: #00FFD1;
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
@@ -1662,18 +1660,18 @@ section {
     width: 100%;
     padding: 0.8rem 1rem;
     background: transparent;
-    border: 1px solid var(--color-border);
+    border: 1px solid #333;
     border-radius: 4px;
-    color: var(--color-text);
+    color: #FFFFFF;
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
 }
 
 .form-input:focus,
-.form-textarea:focus { /* Standard focus style */
+.form-textarea:focus {
     outline: none;
-    border-color: var(--color-primary);
+    border-color: #00FFD1;
 }
 
 .form-textarea {
@@ -1683,8 +1681,8 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--color-surface);
-    border-top: 1px solid var(--color-border);
+    background: #0a0a0a;
+    border-top: 1px solid #333;
     padding: 2rem 0;
 }
 
@@ -1697,7 +1695,7 @@ section {
 }
 
 .footer-text p {
-    color: var(--color-text-secondary);
+    color: #CCCCCC;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
 }
@@ -1708,7 +1706,7 @@ section {
 }
 
 .footer-link {
-    color: var(--color-primary);
+    color: #00FFD1;
     text-decoration: none;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
@@ -1716,7 +1714,7 @@ section {
 }
 
 .footer-link:hover {
-    color: var(--color-text); /* Keep hover effect */
+    color: #FFFFFF;
 }
 
 /* Responsive Design */
@@ -1849,14 +1847,14 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-background);
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-border);
+    background: #333;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-primary);
+    background: #00FFD1;
 }
